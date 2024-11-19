@@ -2,9 +2,14 @@ from django.db import models
 from uuid import uuid4
 
 
-def upload_image_car(instance, filename):
-   return f"{instance.id_car}, {filename}"
+# def upload_image_car(instance, filename):
+#    return f"{instance.id_car}, {filename}"
 
+
+upload_image_car = lambda instance, filename: f"{instance.id_car}, {filename}"
+
+# x = lambda a, b : a * b
+# print(x(5, 6))
 
 class Car(models.Model):
  

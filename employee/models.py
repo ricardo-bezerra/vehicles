@@ -2,9 +2,10 @@ from django.db import models
 from uuid import uuid4
 
 
-def upload_image_employee(instance, filename):
-   return f"{instance.id_employee}, {filename}"
+# def upload_image_employee(instance, filename):
+#    return f"{instance.id_employee}, {filename}"
 
+upload_image_employee = lambda instance, filename: f"{instance.id_employee}, {filename}"
 
 class Employee(models.Model):
  
